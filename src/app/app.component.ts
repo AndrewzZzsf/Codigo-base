@@ -7,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bases';
+  public title: string = 'Que onda';
+  public counter: number = 0;
+  public addNumber(a:number=1):void{
+    this.counter+=a;
+  }
+  public subNumber(a:number=1):void{
+    this.counter-=a;
+  }
+
+  public reset():void{
+    this.counter=0;
+  }
 }
+
+

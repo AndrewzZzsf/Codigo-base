@@ -1,0 +1,19 @@
+<h3>Listado de heroes</h3>
+
+
+
+<ul>
+  <li *ngFor="let name of heroNames" class="list-group-item"> <!-- ngFor es como un bucle for donde se define una variable "let"
+                                                               y un atributo o metodo que va a recorrer por asi decirlo-->
+  {{name}}
+  </li>
+</ul>
+
+
+<input (click)="deleteLastHero()" type="button" value="Eliminar ultimo heroe">
+<h3 *ngIf="deleted;else noDeleted"> Heroe borrado: {{deleted}} </h3> <!-- en el ngIf el que tenga un valor funciona como true, una vez
+                                                                      que el arreglo termina se retorna un "undefined" que Angular lo toma
+                                                                      como un false -->
+<ng-template #noDeleted>
+<h3 > No se ha borrado nada </h3>
+</ng-template>

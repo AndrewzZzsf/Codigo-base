@@ -1,0 +1,39 @@
+*{
+  width: auto;
+  height: auto;
+  justify-content: center;
+  justify-items: center;
+}
+
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.info{
+  padding: 1em;
+  background-color: whitesmoke;
+  border-radius: 1em;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+}
+
+input{
+  margin: 5px;
+}
+
+
+td{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+dd{
+  font-style: oblique;
+}

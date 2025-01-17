@@ -1,0 +1,23 @@
+<div class="info" >
+<dl>
+  <td>Nombre: </td>
+  <dd> {{name}} </dd>
+
+  <td>Nombre: </td>
+  <dd> {{edad}} </dd>
+
+  <td>Metodo: </td>
+  <dd>{{xdMethod}}</dd>
+
+  <td>dospuntosuve: </td>
+  <dd>{{heroDescription()}}</dd>
+
+</dl>
+
+<div class="buttons">
+<input *ngIf="name!='Spiderman'" (click)="changeHero()" class="btn btn-primary" type="button" value="Cambiar nombre" >
+<input *ngIf="edad!=25" (click)="changeAge()" class="btn btn-primary" type="button" value="Cambiar edad">
+<input (click)="resetForm()" type="button" class="btn btn-primary" value="reset">
+</div>
+
+</div>
