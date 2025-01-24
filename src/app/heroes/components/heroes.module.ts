@@ -13,7 +13,7 @@ import { CommonModule } from "@angular/common";
     ListComponent
   ],
   imports:[
-    CommonModule //se importa commonModuke ya que aqui dentro esta el ng if y el ng for, por
+    CommonModule //se importa commonModule ya que aqui dentro esta el ng if y el ng for, por
                  //defecto esta en el app.module, sin embargo al encapsular los modulos se tendria que
                  // importar en el modulo encapsulado
   ]
