@@ -1,5 +1,20 @@
 <h4>Personajes</h4>
 <ul class="list-group">
-  <li class="list-group-item">pepe - 10</li>
-  <li class="list-group-item">rana - 1000</li>
+  <li *ngFor="let character of CharacterList; let i = index; let isLast = last, let isOdd= odd; "
+ class="list-group-item d-flex justify-content-between  mb-2 "
+  [ngClass]="{
+    'list-group-item-success':i == 0,
+    'list-group-item-danger':isLast,
+    'list-group-item-warning':isOdd
+  }"
+  >
+<!--El ngclass permite aplicar hojas de estilo a distintos elementos usando condiciones -->
+<div>
+  <span>{{i + 1}}</span>
+  {{character.name}} - {{character.power}}
+</div>
+  <button  (click)="deleteCharacter(character.id!)"  class="btn btn-danger">X</button>
+</li>
+
+
 </ul>

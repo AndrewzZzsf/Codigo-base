@@ -4,13 +4,16 @@
 <div class="row">
   <div class="col">
 
-    <dbz-list></dbz-list>
+    <dbz-list [CharacterList]="characters"  (onDeleteCharacter)="deleteCharacterById($event)"></dbz-list> <!-- se le esta pasando el atributo (characters) del componente padre
+                                                        , al metodo del componente hijo (CharacterList) -->
 
   </div>
-
+    <!-- a la izquierda esta lo que pertenece a cada componente y a la derecha lo que pertenece al componente en el que se esta usando
+     lo demas, o sea a la izquierda va todo lo de los demas componentes y a la derecha lo de mainPage, que es el componente donde se
+     estan usando -->
   <div class="col">
 
-    <dbz-add-character></dbz-add-character>
+    <dbz-add-character (onNewCharacter)="addNewCharacter($event)" ></dbz-add-character>
 
   </div>
 

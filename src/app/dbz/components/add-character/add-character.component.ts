@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output, output } from '@angular/core';
+import { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'dbz-add-character',
@@ -6,4 +7,22 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './add-character.component.css',
   standalone: false,
 })
-export class AddCharacterComponent { }
+
+
+export class AddCharacterComponent {
+
+  @Output()
+  public onNewCharacter: EventEmitter<Character>=new EventEmitter();
+
+  public character: Character={
+    name: '',
+    power: 0
+  }
+
+  emitCharacter():void{
+    console.log(this.character)
+    this.onNewCharacter.emit(this.character)
+    this.character={name:'',power:0};
+  }
+
+}
